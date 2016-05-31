@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+ul {
+    list-style: none;
+}
+
+.cards {
+    position: relative;
+    height: 30%;
+}
+
+.card {
+    position: absolute;
+    top: 0;
+    height: 90%;
+    
+    img {
+        height: 100%;
+    }
+}
+
+@for $i from 1 to 52 {
+    .card:nth-child(#{$i}) {
+        left: #{$i*2}px;
+        transform: rotate(#{$i}deg);
+    }
+}
+
+#field {
+    height: 70%;
+}
+
+.column {
+    display: inline-block;
+    width: 9%;
+    height: 100%;
+    border: solid 1px black;
+}
